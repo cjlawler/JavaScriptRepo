@@ -18,6 +18,12 @@ app.get('/getRosenkovStockPrice', function (req, res) {
    res.end(String(rosenkovPrice));
 })
 
+app.get('/getBinaryHelixStockPrice', function (req, res) {
+   var binaryHelixPrice = Math.floor(Math.random() * (120 - 100 + 1)) + 100;
+   console.log("Binary Helix stock price is " + binaryHelixPrice);
+   res.end(String(binaryHelixPrice));
+})
+
 var server = app.listen(8081, function () {
 
 	console.log("Stock Quote web services are running");
